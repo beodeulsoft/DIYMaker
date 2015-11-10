@@ -11,7 +11,6 @@ char *tokens[nTraces] = {"token_1", "token_2"};
 // arguments: username, api key, streaming token, filename
 plotly graph = plotly("plotly_username", "plotly_api_key", tokens, "your_filename", nTraces);
 
-int status = WL_IDLE_STATUS;     // the Wifi radio's status
 char ssid[] = "wifi_network_name"; //  your network SSID (name) 
 char pass[] = "wifi_network_password"; // // your network password
 
@@ -25,9 +24,9 @@ void wifi_connect(){
       Serial.print(".");
     } 
     // if you are connected, print out info about the connection:
-      Serial.println("... Connected to network");
-	  Serial.print("  IP address: ");
-	  Serial.println(WiFi.localIP());
+    Serial.println("... Connected to network");
+	Serial.print("  IP address: ");
+	Serial.println(WiFi.localIP());
 }
 
 void setup() {
